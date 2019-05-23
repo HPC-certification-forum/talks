@@ -1,0 +1,409 @@
+\PassOptionsToPackage{hyphens}{url}
+\documentclass[compress,aspectratio=169]{beamer}
+
+\usetheme{Reading}
+
+\graphicspath{{fig/}{img/}{../logo/}}
+
+\newcommand{\ok}[1]{{#1 (done)}}
+\newcommand{\ongoing}[1]{{#1 (ongoing)}}
+\newcommand{\started}[1]{{#1 (started)}}
+\newcommand{\pending}[1]{{#1 (pending in plan)}}
+\newcommand{\hrefb}[2]{\href{#1}{\textcolor{blue}{#2}}}
+
+\subtitle{}
+\title{\huge The HPC Certification Program}
+\author{J. Kunkel on behalf of the HPC Certification Forum}
+\date{2019-02-13}
+\authorURL{https://hpc-certification.org}
+\authorFooter{Julian M. Kunkel}
+\venue{HPC-SIG meeting}
+\institute{Department of Computer Science}
+\groupLogo{\includegraphics[width=2.5cm]{hpccf-small}}
+\titleLogo{ \includegraphics[height=2.5cm]{blur-book-stack-books-590493}\includegraphics[height=2.5cm]{ground-group-growth-461049}\includegraphics[height=2.5cm]{accomplishment-ceremony-college-267885}\includegraphics[height=2.5cm]{ground-group-growth-461049}\includegraphics[height=2.5cm]{blur-book-stack-books-2}}
+
+
+\begin{document}
+
+\begin{frame}[plain]{}
+	\maketitle
+	{\fontsize{5.85pt}{6pt}\selectfont PeCoH is supported by Deutsche Forschungsgemeinschaft (DFG) under grants LU 1335/12-1, OL 241/2-1, RI 1068/7-1}
+\end{frame}
+
+
+% Title: Introducing the HPC Certification Program
+% Abstract: This talk introduces the HPC Certification Forum and its
+% activities to work towards an HPC certification program that will
+% clearly categorize, define, and examine competencies for HPC
+% practitioners.
+% We will present the forum, concepts behind the program, the current
+% status, and ongoing activities.
+% Bio: Julian Kunkel is Lecturer in Computer Science at the University
+% of Reading and managing the Performance Conscious HPC project which
+% contributes to the HPC Certification Forum.
+% He strongly believes that international recognition of skills will
+% help the HPC ecosystem.
+
+
+
+
+\section{The Program}
+\sectionIntroHidden
+
+\subsection{}
+
+\begin{frame}{HPC Certification Program}
+	\begin{block}{Motivation}
+		\begin{itemize}
+
+			\item Not all users possess the right level of training
+				\begin{itemize}
+				\item Inefficient usage of systems, frustration, lost potential
+				\item Good training saves compute time and costs!
+				\end{itemize}
+			\item Learning is not easy
+			\begin{itemize}
+				\item Users need to understand beneficial knowledge for tasks
+				\item There exist various different training material
+				\item Teaching of different data centers is hard to compare
+			\end{itemize}
+			\item Data center have difficulties to verify the skills of users
+		\end{itemize}
+	\end{block}
+
+\end{frame}
+
+
+
+\begin{frame}{The HPC Certification Program}
+		\begin{block}{Goals}
+			\begin{itemize}
+				\item Standardizing HPC knowledge representation
+          \begin{itemize}
+						\item What competences exist, how are they defined?
+            \item Supporting navigation and role-specific knowledge maps
+          \end{itemize}
+				\item Establishing international certificates attesting knowledge
+			\end{itemize}
+		\end{block}
+
+		\textit{The work was bootstraped and is supported by the PeCoH project}
+		\begin{block}{Important!}
+			\begin{itemize}
+				\item We do not compete with content providers
+				\item We do not intent to create a curriculum
+			\end{itemize}
+		\end{block}
+
+
+
+\end{frame}
+
+
+\begin{frame}{Contributions by the PeCoH Project\footnote[frame]{PeCoH was supported by the German Research Foundation (DFG) under grants LU 1353/12-1, OL 241/2-1, and RI 1068/7-1.}}
+	\begin{block}{Past contributions}
+		\vspace*{-2mm}
+		\begin{enumerate}
+			\item Initial classification of competences
+			\item Initial development of a certification program
+			\item Prototype for the online examination
+		\end{enumerate}
+	\end{block}
+
+  The program will be curated by the \includegraphics[width=0.3\textwidth]{hpccf-full}
+
+  \begin{block}{Pending independent contributions}
+    \begin{itemize}
+			\item Creation of workshop material for (a) basic certificate(s)
+			\item Providing an online tutorial for (a) basic certificate(s)
+    \end{itemize}
+  \end{block}
+\end{frame}
+
+
+\begin{frame}{Content of the Certification Program}
+	\begin{itemize}
+		\item Skill is characterized by ID, background, objectives, outcomes
+		\item Skill tree defining the organization of the competences
+		\item Certificates bundle several skills into attestable unit
+	\end{itemize}
+
+		\begin{figure}
+			\includegraphics[width=\textwidth]{skill-tree}
+			\caption{Top-levels of the skill tree (We are working on ADM and BDA)}
+		\end{figure}
+\end{frame}
+
+
+\begin{frame}{Example High-Level Skill}
+
+	\begin{itemize}
+		\item Name: SLURM Workload manager
+		\item Id: USE4.2.2-B
+		\item Background: {\small SLURM is a widely used open-source workload manager providing various advanced features.}
+		\item Objectives:
+		\begin{itemize}
+			\item comprehend and describe the basic architecture of SLURM and its tools
+			\item use relevant tools to run and monitor (parallel) applications
+		\end{itemize}
+	\end{itemize}
+
+	\begin{block}{Outcomes}
+		\begin{itemize}
+			\item run interactive jobs with salloc, a batch job with sbatch
+			\item explain the architecture of SLURM, i.e., the role of slurmd, srun
+			\item explain the function of the tools: sacct, sbatch, salloc, ...
+			\item explain time limits and the benefit of a backfill scheduler
+			\item (see \url{https://www.hpc-certification.org/wiki/})
+		\end{itemize}
+	\end{block}
+\end{frame}
+
+
+\begin{frame}{Classification of HPC Competences}
+	\begin{itemize}
+		\item HPC skills are generally built upon one another
+		\begin{itemize}
+			\item Skills are typically depending on sub-skills $\Rightarrow$ tree structure
+			\item References to skills are possible; still skills are building blocks for various tasks
+		\end{itemize}
+
+		\item Additional attributes are currently used to describe:
+		\begin{itemize}
+			\item Level of a skill (Basic, Intermediate, Expert)
+			\item Suitability for a user role (Tester, Builder, Developer)
+			\item Suitability for a scientific domain (Chemistry, Physics, ...)
+		\end{itemize}
+		\item We will extract these attributes to generate "views" on the content
+			\begin{itemize}
+				\item View: purpose-specific representation / coloring / content
+			\end{itemize}
+	\end{itemize}
+\end{frame}
+
+
+
+
+\begin{frame}{Considerations}
+	\begin{itemize}
+		\item Granularity of skill descriptions
+		\begin{itemize}
+			\item Too fine $\Rightarrow$ content of a skill is predefined at leaf level
+			\item Too coarse $\Rightarrow$ no help for structuring the material
+			\item Guiding principle: leaf node should be coverable in 2-4 hour lecture/workshop
+		\end{itemize}
+
+		\item Certificate definition
+		\begin{itemize}
+			\item Bundles a set of useful skills together %(e.g. "Getting startet with HPC Clusters")
+			\item A users' HPC qualification is certified by successful exams
+		\end{itemize}
+		\item Separation of skill, certificates and content provider
+		\begin{itemize}
+			\item Similar to the concept of a high school graduation exam %("Zentralabitur")
+			\item Learning material can be provided by different institutions
+			\item Teachers can put badges on material: this "trains XYZ"
+		\end{itemize}
+		\item Support flexible usage (views on skill tree) and skills is key
+		\begin{itemize}
+			\item Institutions can derive new skill tree with own groups \\
+			e.g. users in weather/climate, single program, testers
+			\end{itemize}
+	\end{itemize}
+\end{frame}
+
+
+
+\begin{frame}{Status}
+		\begin{block}{}
+			\begin{itemize}
+				\item A structure of the skill tree is released (35 basic skills)
+				\item We are working on descriptions for (learning) objectives and outcomes
+				\item Idea been discussed to DKRZ user group; they want it yesterday
+				\item Technical representation of the HPC skills
+				\begin{itemize}
+					\item Database for the HPC certification program
+					\item Implementation is based on XML with Schema
+				  \item A markdown version and editable wiki exists but is yet not synchronized
+				\end{itemize}
+				\item JavaScript for visualization of skill tree \hrefb{https://www.hpc-certification.org/skills/}{(Live Demo)}
+					\begin{itemize}
+						\item Can be embedded in your webpage and adapted
+							\begin{itemize}
+								\item Role/software-specific knowledge
+								\item What should people know to effectively work in your environment?
+							\end{itemize}
+					\end{itemize}
+			\end{itemize}
+		\end{block}
+\end{frame}
+
+
+
+\begin{frame}{Certification}
+	\begin{block}{Approach}
+		\begin{itemize}
+			\item User takes online multiple-choice test
+			\begin{itemize}
+				\item A combination of JavaScript and a web service
+				\item System selects number of questions randomly from a pool
+				\item System draws 4-5 responses from 10 possible responses
+				\begin{itemize}
+					\item Some responses may be parameterized (random)
+				\end{itemize}
+			\end{itemize}
+			\item Choices are submitted to the web server
+			\item Manual approval of the result
+			\item Automatic creation of certificate and return by email
+			\item Permanent computer-verifiable proof that skill was obtained
+			\begin{itemize}
+				\item Return a text version with GPG signature
+				\item Return a link that can be verified on hpc-certification.org
+			\end{itemize}
+			\item Includes some measure to prevent cheating and brute forcing (e.g., delay)
+		\end{itemize}
+	\end{block}
+\end{frame}
+
+
+\section{The HPC Certification Forum}
+\sectionIntroHidden
+
+\begin{frame}{The \includegraphics[width=0.45\textwidth]{hpccf-full}}
+	The HPC-CF the central authority for the development of the program
+
+	\begin{block}{Organization Details}
+		\begin{itemize}
+			\item An independent international body
+			\item Organized into
+				\begin{itemize}
+					\item Steering board
+					\item Full members with voting rights
+					\item Associate members
+				\end{itemize}
+		\end{itemize}
+	\end{block}
+
+	\begin{block}{Responsibilities}
+		\begin{itemize}
+			\item Curating and maintaining the skill tree and certificates
+			\item Providing tools and ecosystem around the competences
+		\end{itemize}
+	\end{block}
+\end{frame}
+
+\begin{frame}{Governance}
+
+  %\begin{block}{Governance Rules}
+    \begin{itemize}
+      \item We have an initial set of governance rules
+      \item Splitting responsibility across different roles
+    \end{itemize}
+  %\end{block}
+
+  %\vspace*{-1em}
+
+  \begin{block}{Current Chairs}
+  \vspace*{-0.5em}
+  \begin{itemize}
+    \item Program chair: Julian Kunkel (University of Reading)
+    \item Curriculum chair: Kai Himstedt (University of Hamburg)
+    \item  Topic chairs:
+    \begin{itemize}
+      \item HPC Knowledge: Lev Lafayette (University of Melbourne)
+      \item Performance Engineering: Anja Gerbes (University of Frankfurt)
+      \item Use of the HPC Environment: Jean-Thomas Acquaviva (DDN)
+      \item Software Development: Waseem Kamleh (University of Adelaide)
+			\item Administration: Sharan Kalwani (DataSwing)
+			\item Big Data Analytics: Julian Kunkel // Interim
+    \end{itemize}
+    \item Examination chair: not seated this year
+    \item Publicity chair: Weronika Filinger
+  \end{itemize}
+  \end{block}
+\end{frame}
+
+
+\section{Conclusions \& Roadmap}
+\sectionIntroHidden
+
+\begin{frame}{Outlook and Expected Benefits}
+	\begin{block}{HPC practitioners}
+		\vspace*{-0.2cm}
+	\begin{itemize}
+	\item Increase motivation to participate as the certificates are recognized in a CV
+	\item Validate knowledge via tests
+	\item Browse relevant competences
+	\item Identify recommended and required skills related to certain tasks
+	\item Understand and compare teaching offers across sites
+	\end{itemize}
+	\end{block}
+	\vspace*{-0.3cm}
+	\begin{block}{Data centers}
+		\vspace*{-0.2cm}
+	\begin{itemize}
+	\item Increase sharing of teaching materials
+	\item Simplifies documentation of taught skills
+	\item Identify missing teaching activities
+	\item Tailor skill-representation specifically to users
+	\item Correlate lack of skills with efficient use
+	\end{itemize}
+	\end{block}
+\end{frame}
+
+
+\begin{frame}{Summary}
+
+	\begin{block}{HPC Certification Program}
+		\begin{itemize}
+			\item Effort to standardize representation of relevant HPC skills
+      \begin{itemize}
+        \item Hierarchical definition of skills for practitioners
+        \item Building blocks that can be cherry-picked for different tasks
+      \end{itemize}
+      \item It's goal is \textbf{NOT} to provide content or a linear curriculum
+			\item Perspective for data centers
+				\begin{itemize}
+					\item Use statistics and machine learning to direct users to right skills
+					\item Make certain skills a mandatory requirement?
+				\end{itemize}
+			\item Customizable representation and navigation for data centers/domains
+      \begin{itemize}
+        \item Interactive viewer to browse skills and related content
+				\item We will use the viewer to link good content to the skills, too!
+      \end{itemize}
+      \item Visit us and join our mailing lists: \url{https://hpc-certification.org}
+		\end{itemize}
+	\end{block}
+\end{frame}
+
+\begin{frame}{Roadmap: ISC-2019}
+		\begin{itemize}
+			\item Finalizing the first version of the skill-tree (V1)
+			\item Finalizing documentation how to create views with the JavaScript
+        \begin{itemize}
+          \item This will allow to outsource roles (e.g., tester) but also link to material
+        \end{itemize}
+			\item Finalizing the seal that can be added to training material
+			\begin{itemize}
+				\item We are looking forward to work with together with anyone
+			\end{itemize}
+			\item Completing "Big Data Analytics for HPC" and Admin subtrees
+      \item Creating converters for markdown version of the skill-tree
+			\item Completing the online exam for the certification (of some base courses)
+				\begin{itemize}
+					\item Determine legal disclaimer / terms of service (help welcome)
+				\end{itemize}
+      \item Link third-party workshop material (of some base courses)
+			\item Discuss affiliation program for institutions/companies
+			\item Map out content by the \textit{SIGHPC Education Chapter Content Committee}
+		\end{itemize}
+  \label{frame:last}
+\end{frame}
+
+
+
+
+
+
+\end{document}
