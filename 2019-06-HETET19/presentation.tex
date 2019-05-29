@@ -17,7 +17,7 @@
 \date{2019-06-18}
 \authorURL{https://hpc-certification.org}
 \authorFooter{Julian M. Kunkel}
-\venue{ISC HPC}
+\venue{HETET Workshop}
 \institute{Department of Computer Science}
 \groupLogo{\includegraphics[width=2.5cm]{hpccf-small}}
 \titleLogo{ \includegraphics[height=2.5cm]{blur-book-stack-books-590493}\includegraphics[height=2.5cm]{ground-group-growth-461049}\includegraphics[height=2.5cm]{accomplishment-ceremony-college-267885}\includegraphics[height=2.5cm]{ground-group-growth-461049}\includegraphics[height=2.5cm]{blur-book-stack-books-2}}
@@ -28,30 +28,6 @@
 \begin{frame}[plain]{}
 	\maketitle
 	{\fontsize{5.85pt}{6pt}\selectfont PeCoH is supported by Deutsche Forschungsgemeinschaft (DFG) under grants LU 1335/12-1, OL 241/2-1, RI 1068/7-1}
-\end{frame}
-
-
-\begin{frame}{The HPC Certification BoF: Agenda}
-	\begin{block}{Short presentations}
-	\begin{itemize}
-		\item Introduction to the HPC Certification Program
-		\item HPC tools and usage: a view from the community
-		\item Skill tree introduction
-		\item Certification process introduction
-	\end{itemize}
-	\end{block}
-
-	\begin{block}{Community discussion}
-		We prepared several stations in the room allowing you to give feedback % Details later
-	\end{block}
-
-	\begin{block}{Wrapup: Summary \& Conclusion}
-		\begin{itemize}
-			\item Roadmap
-			\item Joint discussion
-		\end{itemize}
-	\end{block}
-
 \end{frame}
 
 
@@ -85,6 +61,7 @@
 
 \begin{frame}{The HPC Certification Program}
 		\begin{block}{Goals}
+			\vspace*{-0.25em}
 			\begin{itemize}
 				\item Standardizing HPC knowledge representation
           \begin{itemize}
@@ -95,14 +72,110 @@
 			\end{itemize}
 		\end{block}
 
+
+		\vspace*{-0.25em}
 		\begin{block}{Important!}
+			\vspace*{-0.25em}
 			\begin{itemize}
 				\item We do not compete with content providers
 				\item We do not intent to create a curriculum
 			\end{itemize}
 		\end{block}
+
+		\vspace*{-0.25em}
+		\begin{block}{Scope of the talk/paper}
+			\vspace*{-0.25em}
+			\begin{itemize}
+				\item Achievements in one year of the program
+				\item Status of the effort
+			\end{itemize}
+		\end{block}
+
 \end{frame}
 
+
+\begin{frame}{Status of the Activity}
+
+\begin{columns}
+\column{0.8\textwidth}
+	\begin{itemize}
+	\item Organizing regular meetings (see our webpage)
+	\item Released a first skill tree
+	\item Released technical representations of the HPC skills
+	\item Released JavaScript for visualization of skill tree \hrefb{https://www.hpc-certification.org/skills/}{(demo)}
+		\begin{itemize}
+			\item Enables views: adjustable/embedable in your webpage
+		\end{itemize}
+	\item Developed prototype for exam process: legal framework
+	\item Designed seal of endorsement
+	\item Engaged with various stakeholders (e.g., SIGHPC Edu)
+	\item Conducted survey to verify the skill tree (more to come!)
+\end{itemize}
+
+\column{0.2\textwidth}
+\includegraphics[width=\textwidth]{certified.pdf}
+\end{columns}
+
+\medskip
+
+\textit{All our developments are under open licenses (except the exam questions)}
+\end{frame}
+
+
+\section{The HPC Certification Forum}
+\sectionIntroHidden
+
+\begin{frame}{The \includegraphics[width=0.45\textwidth]{hpccf-full}}
+	The HPC-CF is the central authority for the development of the program
+
+	\begin{block}{Organization Details}
+		\begin{itemize}
+			\item An independent international body
+			\item Organized into
+				\begin{itemize}
+					\item Steering board
+					\item Full members with voting rights
+					\item Associate members
+				\end{itemize}
+		\end{itemize}
+	\end{block}
+
+	\begin{block}{Responsibilities}
+		\begin{itemize}
+			\item Curating and maintaining the skill tree and certificates
+			\item Providing tools and ecosystem around the competences
+		\end{itemize}
+	\end{block}
+\end{frame}
+
+\begin{frame}{Governance}
+
+	\smallskip
+  We have an initial set of governance rules splitting responsibility across roles
+  %\vspace*{-1em}
+
+  \begin{block}{Current Chairs}
+  \vspace*{-0.5em}
+  \begin{itemize}
+    \item Program chair: Julian Kunkel (University of Reading)
+    \item Curriculum chair: Kai Himstedt (University of Hamburg)
+    \item  Topic chairs:
+    \begin{itemize}
+      \item HPC Knowledge: Lev Lafayette (University of Melbourne)
+      \item Performance Engineering: Anja Gerbes (University of Frankfurt)
+      \item Use of the HPC Environment: Jean-Thomas Acquaviva (DDN)
+      \item Software Development: Waseem Kamleh (University of Adelaide)
+			\item Administration: Sharan Kalwani (DataSwing)
+			\item Big Data Analytics: Julian Kunkel // Interim
+    \end{itemize}
+    \item Examination chair: was not seated in 2018
+    \item Publicity chair: Weronika Filinger
+  \end{itemize}
+  \end{block}
+\end{frame}
+
+\section{Skills}
+\sectionIntroHidden
 
 \begin{frame}{Content of the Certification Program}
 	\begin{itemize}
@@ -118,6 +191,31 @@
 	\end{figure}
 \end{frame}
 
+
+\begin{frame}{Example High-Level Skill}
+
+\begin{itemize}
+\item Name: SLURM Workload manager
+\item Id: USE4.2.2-B
+\item Background: {\small SLURM is a widely used open-source workload
+manager providing various advanced features.}
+\item Aim:
+\begin{itemize}
+\item comprehend and describe the basic architecture of SLURM and its tools
+\item use relevant tools to run and monitor (parallel) applications
+\end{itemize}
+\end{itemize}
+
+\begin{block}{Learning outcomes}
+\begin{itemize}
+\item run interactive jobs with salloc, a batch job with sbatch
+\item explain the architecture of SLURM, i.e., the role of slurmd, srun
+\item explain the function of the tools: sacct, sbatch, salloc, ...
+\item explain time limits and the benefit of a backfill scheduler
+\item see \url{https://www.hpc-certification.org/wiki/}
+\end{itemize}
+\end{block}
+\end{frame}
 
 
 \begin{frame}{Classification of HPC Competences}
@@ -172,87 +270,8 @@
 \end{frame}
 
 
-\begin{frame}{Status}
-
-\begin{columns}
-\column{0.8\textwidth}
-	\begin{itemize}
-	\item Organizing regular meetings (see our webpage)
-	\item Released a first skill tree (we will discuss this after the talks)
-	\item Released technical representations of the HPC skills
-	\item Released JavaScript for visualization of skill tree \hrefb{https://www.hpc-certification.org/skills/}{(demo)}
-		\begin{itemize}
-			\item Enables views: adjustable/embedable in your webpage
-		\end{itemize}
-	\item Developed prototype for exam process: legal framework
-	\item Designed seal of endorsement
-	\item Engaged with various stakeholders (e.g., SIGHPC Edu)
-	\item Conducted survey to verify the skill tree (more to come!)
-\end{itemize}
-
-\column{0.2\textwidth}
-\includegraphics[width=\textwidth]{certified.pdf}
-\end{columns}
-
-\medskip
-
-\textit{All our developments are under open licenses (except the exam questions)}
-\end{frame}
 
 
-
-
-\section{The HPC Certification Forum}
-\sectionIntroHidden
-
-\begin{frame}{The \includegraphics[width=0.45\textwidth]{hpccf-full}}
-	The HPC-CF is the central authority for the development of the program
-
-	\begin{block}{Organization Details}
-		\begin{itemize}
-			\item An independent international body
-			\item Organized into
-				\begin{itemize}
-					\item Steering board
-					\item Full members with voting rights
-					\item Associate members
-				\end{itemize}
-		\end{itemize}
-	\end{block}
-
-	\begin{block}{Responsibilities}
-		\begin{itemize}
-			\item Curating and maintaining the skill tree and certificates
-			\item Providing tools and ecosystem around the competences
-		\end{itemize}
-	\end{block}
-\end{frame}
-
-\begin{frame}{Governance}
-
-	\smallskip
-  We have an initial set of governance rules splitting responsibility across roles
-  %\vspace*{-1em}
-
-  \begin{block}{Current Chairs}
-  \vspace*{-0.5em}
-  \begin{itemize}
-    \item Program chair: Julian Kunkel (University of Reading)
-    \item Curriculum chair: Kai Himstedt (University of Hamburg)
-    \item  Topic chairs:
-    \begin{itemize}
-      \item HPC Knowledge: Lev Lafayette (University of Melbourne)
-      \item Performance Engineering: Anja Gerbes (University of Frankfurt)
-      \item Use of the HPC Environment: Jean-Thomas Acquaviva (DDN)
-      \item Software Development: Waseem Kamleh (University of Adelaide)
-			\item Administration: Sharan Kalwani (DataSwing)
-			\item Big Data Analytics: Julian Kunkel // Interim
-    \end{itemize}
-    \item Examination chair: was not seated in 2018
-    \item Publicity chair: Weronika Filinger
-  \end{itemize}
-  \end{block}
-\end{frame}
 
 \section{Certification Process}
 \sectionIntroHidden
@@ -313,52 +332,8 @@ Verification URL: https://hpc-certification.org/[...]
 
 
 
-\section{Roadmap \& Conclusions}
+\section{Summary \& Conclusions}
 \sectionIntroHidden
-
-
-\begin{frame}{Roadmap: Supercomputing 2019}
-		\begin{itemize}
-			\item Finalizing documentation how to create views with the JavaScript
-        \begin{itemize}
-          \item This will allow to outsource roles (e.g., tester) but also links to material
-        \end{itemize}
-      \item Creating converters for markdown version of the skill-tree
-			\item Completing the online exam for the certification (of some base courses)
-				\begin{itemize}
-					\item Determine legal disclaimer / terms of service (help welcome)
-				\end{itemize}
-      \item Link third-party workshop material (of some base courses)
-			\item Discuss affiliation program for institutions/companies
-			\item Map out content by the \textit{SIGHPC Education Chapter Content Committee}
-		\end{itemize}
-  \label{frame:last}
-\end{frame}
-
-
-\begin{frame}{Outlook and Expected Benefits}
-	\begin{block}{HPC practitioners}
-		\vspace*{-0.2cm}
-	\begin{itemize}
-	\item Increase motivation to participate as the certificates are recognized in a CV
-	\item Validate knowledge via tests
-	\item Browse relevant competences
-	\item Identify recommended and required skills related to certain tasks
-	\item Understand and compare teaching offers across sites
-	\end{itemize}
-	\end{block}
-	\vspace*{-0.3cm}
-	\begin{block}{Data centers}
-		\vspace*{-0.2cm}
-	\begin{itemize}
-	\item Increase sharing of teaching materials
-	\item Simplifies documentation of taught skills
-	\item Identify missing teaching activities
-	\item Tailor skill-representation specifically to users
-	\item Correlate lack of skills with efficient use
-	\end{itemize}
-	\end{block}
-\end{frame}
 
 
 
