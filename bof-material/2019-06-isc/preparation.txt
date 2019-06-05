@@ -1,0 +1,14 @@
+Print:
+  1) Each direct subskill webpage: 2x:
+  - https://www.hpc-certification.org/wiki/skill-tree/b
+
+  2) All examiner documents: 1x
+
+  3) Each skill-tree* document in A3
+  4) 7x: the pages:
+    https://www.hpc-certification.org/wiki/skill-tree/k/4/1/b
+    https://www.hpc-certification.org/wiki/skill-tree/k/4/2/b
+
+Material:
+  14 pens
+  Post-its (10-20 papers per station, these could be split easily)
