@@ -105,7 +105,7 @@
 \end{frame}
 
 
-\begin{frame}{The HPC Certification Program}
+\begin{frame}{The \includegraphics[width=0.45\textwidth]{hpccf-full}}
 		\begin{block}{Goals}
 			\begin{itemize}
 				\item Fine-grained standardizing HPC knowledge representation
@@ -115,113 +115,36 @@
             \item Supporting navigation and role-specific knowledge maps
           \end{itemize}
 				\item Establishing international certificates attesting knowledge
+        \item Supporting an ecosystem around the HPC competences
 			\end{itemize}
 		\end{block}
 
-		\begin{block}{Important!}
+    \begin{block}{Scope of the forum}
+    \begin{itemize}
+      \item Central authority for competence representation, certification, and support
+      \item Purposeful limitations of the forum:
 			\begin{itemize}
 				\item We do not compete with content providers
-				\item We do not intent to create a curriculum
+				\item We do not create a curriculum (university/centers responsibility)
 			\end{itemize}
+    \end{itemize}
 		\end{block}
-
-    \begin{block}{This talk is about contributing to the knowledge representation}
-    \end{block}
-\end{frame}
-
-
-
-\begin{frame}{Classification of HPC Competences}
-	\begin{itemize}
-		\item Organization of HPC skills
-		\begin{itemize}
-			\item Skills are typically depending on sub-skills $\Rightarrow$ tree structure
-			\item References to skills are possible; still skills are building blocks for various tasks
-			\item One skill can have multiple instances for different skill levels
-		\end{itemize}
-
-		\item Granularity of skill descriptions
-		\begin{itemize}
-			\item Too fine $\Rightarrow$ content of a skill is predefined at leaf level
-			\item Too coarse $\Rightarrow$ no help for structuring the material
-			\item Guiding principle: leaf node should be coverable in 2-4 hour lecture/workshop
-		\end{itemize}
-
-		\item External information can be linked to the skills providing different \textbf{views}
-		\begin{itemize}
-			\item Suitability for a user role (Tester, Builder, Developer)
-			\item Suitability for a scientific domain (Chemistry, Physics, ...)
-			\item View: purpose-specific representation / coloring / content
-				\begin{itemize}
-				\item Groups/institutions can derive a new skill tree with their own emphasis
-				\item  What should people know to effectively work in your environment?
-				\end{itemize}
-		\end{itemize}
-	\end{itemize}
-\end{frame}
-
-
-
-\begin{frame}{Further Considerations}
-	\begin{itemize}
-		\item Certificate definition
-		\begin{itemize}
-			\item Bundles a set of useful skills together %(e.g. "Getting startet with HPC Clusters")
-			\item A users' HPC qualification is certified by successful exams
-		\end{itemize}
-		\item Separation of skill, certificates and content provider
-		\begin{itemize}
-			\item Similar to the concept of a high school graduation exam %("Zentralabitur")
-			\item Learning material can be provided by different institutions
-			\item Teachers can put badges on material: this "trains XYZ"
-		\end{itemize}
-		\item Verification of skill tree and certification approach
-			\begin{itemize}
-				\item We utilize the HPC community/practitioners to justify approaches
-			\end{itemize}
-	\end{itemize}
-\end{frame}
-
-
-\begin{frame}{Status}
-
-\begin{columns}
-\column{0.8\textwidth}
-	\begin{itemize}
-	\item Organizing regular meetings (see our webpage)
-	\item Released a first skill tree (we will discuss this after the talks)
-	\item Released technical representations of the HPC skills
-	\item Released JavaScript for visualization of skill tree \hrefb{https://www.hpc-certification.org/skills/}{(demo)}
-		\begin{itemize}
-			\item Enables views: adjustable/embedable in your webpage
-		\end{itemize}
-	\item Developed prototype for exam process: legal framework
-	\item Designed seal of endorsement
-	\item Engaged with various stakeholders (e.g., SIGHPC Edu)
-	\item Conducted survey to verify the skill tree (more to come!)
-\end{itemize}
-
-\column{0.2\textwidth}
-\includegraphics[width=\textwidth]{certified.pdf}
-\end{columns}
-
-\medskip
-
-\textit{All our developments are under open licenses (except the exam questions)}
 \end{frame}
 
 
 \begin{frame}{The \includegraphics[width=0.45\textwidth]{hpccf-full}}
-	The HPC-CF is the central authority for the development of the program
 
 	\begin{block}{Organization Details}
 		\begin{itemize}
 			\item An independent international body
 			\item Organized into
 				\begin{itemize}
-					\item Steering board
-					\item Full members with voting rights
-					\item Associate members
+					\item Steering board (elected)
+					\item Full members (with voting rights)
+            \begin{itemize}
+              \item Contributors to the project (e.g., 1-2 hours per month)
+            \end{itemize}
+					\item Associate members (anyone and any institution)
           \item Collaboration with e.g., SIGHPC Education Chapter
 				\end{itemize}
 		\end{itemize}
@@ -235,10 +158,77 @@
 	\end{block}
 \end{frame}
 
+\begin{frame}{Membership}
+
+  \begin{block}{Mandate and Election}
+  \begin{itemize}
+  \item Steering board is elected for one year (period of activity)
+  \item Period June -- June
+  \item Take over of new steering board during general assembly at ISC HPC
+  \end{itemize}
+  \end{block}
+
+  \begin{block}{Current election}
+  \begin{itemize}
+  \item We will soon start with the voting for next year's period
+  \item Join our Slack channel and election channel if you are interested
+  \end{itemize}
+  \end{block}
+\end{frame}
+
+
+
+
+
+\begin{frame}{Governance}
+	\smallskip
+  We have governance rules splitting responsibility across roles
+  \begin{block}{Steering Board}
+  \vspace*{-0.5em}
+  \begin{itemize}
+    \item General chair: Julian Kunkel (University of Reading)
+    \item Skill-tree curator: Kai Himstedt (University of Hamburg)
+    \item Topic curators:
+    \begin{itemize}
+      \item HPC Knowledge: Lev Lafayette (University of Melbourne)
+      \item Performance Engineering: Anja Gerbes (University of Frankfurt)
+      \item Use of the HPC Environment: (Jean-Thomas Acquaviva) (DDN)
+      \item Software Development: Waseem Kamleh (University of Adelaide)
+			\item Administration: Sharan Kalwani (DataSwing)
+			\item Big Data Analytics: Cristiana Dinea (NVIDIA)
+    \end{itemize}
+    \item Examination curator: Christian Meesters ( (University of Mainz))
+    \item Publicity chair: Weronika Filinger
+  \end{itemize}
+  \end{block}
+\end{frame}
+
+
+
+\begin{frame}{Organization}
+  \begin{block}{Organization of the members}
+	\begin{itemize}
+  \item Webpage is the central hub (\url{https://www.hpc-certification.org})
+  \item Mailinglists (news, members, board)
+	\item Monthly public meetings on our Slack channel
+  \item Annual general assembly (form of a BoF at ISC or workshop)
+  \end{itemize}
+  \end{block}
+
+  \begin{block}{Data handling}
+    \begin{itemize}
+      \item Everything* is developed/available in the open \\
+        GitHub (\url{https://github.com/HPC-certification-forum})
+      \item Exception are examination questions (later talk)
+    \end{itemize}
+  \end{block}
+\end{frame}
+
+
 \section{Skills}
 \sectionIntroHidden
 
-\begin{frame}{Content of the Certification Program}
+\begin{frame}{Classification of Competences == Skills}
 	\begin{itemize}
 		\item A \textbf{skill} defines background, objectives, learning outcomes
 		\item The \textbf{skill tree} organizes the competences as hierarchical skills
@@ -248,12 +238,12 @@
 	\begin{figure}
 		\includegraphics[width=\textwidth]{skill-tree}
 		\vspace*{-2em}
-		\caption{Top-levels of the skill tree (We are working on ADM and BDA branches)}
+		\caption{Top-levels of the skill tree (Initial ADM and BDA branches)}
 	\end{figure}
 \end{frame}
 
 
-\begin{frame}{Example High-Level Skill}
+\begin{frame}{Example High-Level Skill (Shortened)}
 \begin{itemize}
 \item Name: SLURM Workload manager
 \item Id: USE4.2.2-B
@@ -272,22 +262,113 @@ manager providing various advanced features.}
 \item explain the architecture of SLURM, i.e., the role of slurmd, srun
 \item explain the function of the tools: sacct, sbatch, salloc, ...
 \item explain time limits and the benefit of a backfill scheduler
-\item see \url{https://www.hpc-certification.org/wiki/}
+\item \textit{see \url{https://www.hpc-certification.org/wiki/}}
 \end{itemize}
 \end{block}
 \end{frame}
 
 
 
+\begin{frame}{Classification of HPC Competences}
+	\begin{itemize}
+		\item Granularity of skill descriptions
+		\begin{itemize}
+			\item Too fine $\Rightarrow$ content of a skill is predefined at leaf level
+			\item Too coarse $\Rightarrow$ no help for structuring the material
+			\item Guiding principle: leaf node should be coverable in 1-4 hour lecture/workshop
+		\end{itemize}
 
-\section{Contributing}
 
-\begin{frame}{High-Level Editing}
+    \item Organization of HPC skills
+    \begin{itemize}
+      \item Skills are typically depending on sub-skills $\Rightarrow$ tree structure
+      \item References to skills are possible; still skills are building blocks for various tasks
+      \item One skill can have multiple instances for different skill levels
+    \end{itemize}
+
+
+    \item Verification of skill tree and certification approach
+      \begin{itemize}
+        \item Feedback by the HPC community/practitioners justify the approaches
+      \end{itemize}
+	\end{itemize}
+\end{frame}
+
+
+
+\begin{frame}{Further Considerations}
+	\begin{itemize}
+		\item Certificate definition
+		\begin{itemize}
+			\item Bundles a set of useful skills together %(e.g. "Getting startet with HPC Clusters")
+			\item A users' HPC qualification is certified by successful exams
+		\end{itemize}
+		\item Separation of skill, certificates and content provider
+		\begin{itemize}
+			\item Similar to the concept of a high school graduation exam %("Zentralabitur")
+			\item Learning material can be provided by different institutions
+			\item Teachers can put badges on material: this "trains XYZ"
+		\end{itemize}
+  	\item External information can be linked to the skills providing different \textbf{views}
+		\begin{itemize}
+			\item Suitability for a user role (Tester, Builder, Developer)
+			\item Suitability for a scientific domain (Chemistry, Physics, ...)
+			\item View: purpose-specific representation / coloring / content
+				\begin{itemize}
+				\item Groups/institutions can derive a new skill tree with their own emphasis
+				\item  What should people know to effectively work in your environment?
+				\end{itemize}
+		\end{itemize}
+	\end{itemize}
+\end{frame}
+
+
+\begin{frame}{Status / Previous Activities}
+
+\begin{columns}
+\column{0.8\textwidth}
+	\begin{itemize}
+	\item Released a version of the skill tree (v0.5)
+	\item Released technical representations of the HPC skills
+    \begin{itemize}
+      \item XML and Markdown versions (embedded on a Wiki)
+    \end{itemize}
+	\item Released JavaScript for visualization of skill tree \hrefb{https://www.hpc-certification.org/skills/}{(demo)}
+		\begin{itemize}
+			\item Enables views: adjustable/embedable in your webpage
+		\end{itemize}
+	\item Developed prototype for exam process and framework
+  \item Developed a tree-versioning strategy
+	\item Designed seal of endorsement
+	\item Engaged with various stakeholders (e.g., SIGHPC Edu)
+	\item Conducted survey to verify the skill tree (more to come!)
+\end{itemize}
+
+\column{0.2\textwidth}
+\includegraphics[width=\textwidth]{certified.pdf}
+\end{columns}
+
+$$\medskip
+$$\textit{All our developments are under open licenses (except the exam questions)}
+\end{frame}
+
+
+\begin{frame}{Wiki for Skills}
+  \includegraphics[width=0.8\textwidth]{www}
+\end{frame}
+
+
+\begin{frame}{Contribution to the Skill-Tree High-Level Editing}
+
+  \begin{block}{How can members contribute?}
   \begin{itemize}
     \item Webpage with Markdown version controlled in Git
       \begin{itemize}
         \item \url{https://www.hpc-certification.org/wiki/skill-tree/b}
         \item GitHub: \url{https://github.com/HPC-certification-forum/skill-tree}
+        \begin{itemize}
+          \item Pull requests, reviews, comments, ...
+        \end{itemize}
       \end{itemize}
     \item Editing a MindMap, the structure of Skills
       \begin{itemize}
@@ -295,11 +376,8 @@ manager providing various advanced features.}
         \item Uses the OpenSource tool Freemind
       \end{itemize}
     \item Discussion on our \href{https://join.slack.com/t/hpc-certification/shared_invite/enQtMzUwNzU3NzM2MTkzLTAzZWM3NDg0N2I2ZmQwOWI5ZGUwNjNlNDgzM2RmOTM3ZWRjNjIxYTc5NzUxYTJhNmRlNmM5YmE1NDY3YzkzYzA}{Slack}
-    \item We welcome any contribution via either channel
-      \begin{itemize}
-        \item Pull requests are also welcome
-      \end{itemize}
-  \end{itemize}
+  \end{itemize}  
+  \end{block}
 \end{frame}
 
 
