@@ -85,15 +85,55 @@
 \end{frame}
 
 \begin{frame}
-  \frametitle{Fill in Blanks}
+  \frametitle{Freetext}
+  Freetext question need to be \emph{very} much restricted to simple words or characters. For example:
+  \exercise[Changing Permissions]{
+           If a script file 'foo.sh' has the permissions '-rw-r--r--', 
+           how do make it executable for your group for sharing the script?
+           }
+  Here, only two possible answers are allowed, in octal or explicit mode.
+  \pause
+  \hint[Most Suitable]{This kind is of question is most suitable to test actual knowledge. As we can expect only few students to memorize all nifty details, it primarly tests for gained experience and is to be used with great care (not to frequent).}
 \end{frame}
 
 \begin{frame}
-  \frametitle{Parson Problems}
+  \frametitle{Fill in Blanks}
+  Filling Blanks is a (technical) extension of Freetext. It is more specific and the \emph{blank screen of horror} problem, whilst testing vocabulary. An example:
+  \exercise[Bash Operators]{
+            Which operator has to be filled in the place of '\_' to print the statement in line 3?\newline
+            {\small \bf 1:} \texttt{number=4}\newline
+            {\small \bf 2:} \texttt{if [ \$((number {\color{red}\bf\_} 2 )) -eq 0 ]; then}\newline
+            {\small \bf 3:} \texttt{~~~~echo "\$number is even"}\newline
+            {\small \bf 4:} \texttt{fi}
+            }
+  \hint{The answer is a single character.}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Parsons Problems}
+  Parsons Problems, too, avoid the \emph{blank screen of horror} problem and also the vocabulary testing. Instead they allow the examinee to concentrate on the control flow. 
+  \vspace{-.5em}
+  \begin{columns}
+    \begin{column}{.7\textwidth}
+      \exercise[Bash Loop \& Math]{
+                Rearrange these lines to sum the values.\newline
+                {\small \bf 1:} \texttt{done}\newline
+                {\small \bf 2:} \texttt{values=(1 2 3 4)}\newline
+                {\small \bf 3:} \texttt{for v in \${values[@]}; do}\newline
+                {\small \bf 4:} \texttt{total=\$((total + v))}\newline
+                }
+    \end{column}
+    \begin{column}{.3\textwidth}
+      Real tasks can be longer and intricated - allowing test of control flow understanding.
+    \end{column}
+  \end{columns}
+  \vspace{-.5em}
+  \hint[Note]{The answer can be a free text, e.\,g.: ``2 3 4 1'', which is easy to parse and check.}
 \end{frame}
 
 \begin{frame}
   \frametitle{Tracing}
+  Tracing execution can be interesting, particularly for 
 \end{frame}
 
 \begin{frame}
