@@ -1,7 +1,7 @@
 %-------------------------------------------------------%
 %      HPCCF Virt. Workshop Presentation CM             %
 %-------------------------------------------------------%
-\documentclass[english,xcolor=pdftex,dvipsnames,compress,aspectratio=169]{beamer}
+\documentclass[english,xcolor=pdftex,dvipsnames,compress,aspectratio=169,handout]{beamer}
 
 
 %\setbeamertemplate{mini frames}[box]
@@ -279,8 +279,42 @@ showstringspaces=false}
 \tikzstyle{na} = [baseline=-.5ex]
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
-\begin{frame}[plain] % plain erzeugt Titelseite ohne Kopf- und Fußzeile
+\begin{frame}[plain] 
   \titlepage
+\end{frame}
+
+\begin{frame}[plain] 
+  \frametitle{About Me}
+  \begin{columns}
+   \begin{column}{0.6\textwidth}
+    \centering
+    \includegraphics[width=0.6\textwidth]{images/virus}\newline
+    {\scriptsize
+    \begin{itemize}
+     \item I hope everyone is doing well.
+     \item I hope we all be teaching \emph{in personam}, soon-ish, again.
+    \end{itemize}
+
+    }
+   \end{column}
+   \begin{column}{0.4\textwidth}
+    \pause
+    \begin{itemize}[<+->]
+     \item PhD in Biophysics
+     \item PostDoc in Genetic Epidemiology (Programming)
+     \item detour in industry
+     \item since 2014 Computational Scientist
+     \item working with/at Tier II/III clusters \ldots
+     \item \ldots as life science contact and lecturer
+    \end{itemize}
+   \end{column}
+  \end{columns}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+\begin{frame}
+    \frametitle{Outline}
+    \tableofcontents
 \end{frame}
 
 \include{strategy}
