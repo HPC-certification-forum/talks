@@ -1,0 +1,283 @@
+\newcommand\resetsubfigs{\setcounter{sub\@captype}{0}}
+
+\usepackage{url}
+\usepackage{hyperref}
+%\def\UrlBreaks{\do\/\do-\do.}
+\usepackage{tikz}
+\usepackage{textpos}
+\usepackage{caption}
+\usepackage{subfig}
+\DeclareGraphicsExtensions{.png,.pdf,.jpg,.jpeg}
+\usepackage{svg}
+
+\usepackage{xcolor}
+
+\usepackage[T1]{fontenc}
+\graphicspath{{fig/}{img/}}
+\usepackage[utf8]{inputenc}
+\usepackage{bera}
+\usepackage{setspace}
+
+\usepackage{listings} % benötigt [containsverbatim] bei \begin{frame}!!!!
+
+
+\definecolor{readingRed}{HTML}{d2002e}
+\definecolor{readingGray}{HTML}{555555}
+
+
+\mode<presentation>
+\beamer@compresstrue
+
+\setbeamertemplate{section in head/foot}
+{\color{white}\tiny \usebeamerfont{section in head/foot} \textbf{\insertsectionhead}}
+
+\setbeamertemplate{section in head/foot shaded}
+{\color{white!75!readingRed}\tiny \tiny \usebeamerfont{section in head/foot}\insertsectionhead}
+
+\setbeamercolor*{mini frame}{fg=white,bg=white}
+
+\defbeamertemplate*{headline}{reading}
+{
+  \begin{beamercolorbox}[ht=2.25ex,dp=3.75ex]{section in head/foot}
+    \insertnavigation{\paperwidth}
+  \end{beamercolorbox}%
+}%
+\setbeamertemplate{navigation symbols}{}
+
+\defbeamertemplate*{frametitle}{reading}
+{%
+  \nointerlineskip%
+  \usebeamerfont{headline}%
+  \nointerlineskip%
+  \begin{beamercolorbox}[wd=\paperwidth,leftskip=.3cm,rightskip=.3cm plus1fil,vmode]{empty}
+    \usebeamerfont*{frametitle}\insertframetitle%
+      \ifx\insertframesubtitle\@empty%
+        \strut\par%
+      \else
+        \par{\usebeamerfont*{framesubtitle}{\usebeamercolor[fg]{framesubtitle}\insertframesubtitle}\strut\par}%
+      \fi%%
+    \usebeamerfont{headline}%
+    \vskip.5ex
+ \end{beamercolorbox}%
+ \begin{textblock*}{100mm}(.88\textwidth,-0.5cm)
+ \includegraphics[width=2cm]{reading-logo}
+ \end{textblock*}
+ \vspace*{-1.5em}
+}
+\makeatletter
+
+\newcommand{\setlistspacing}[2]{\def\@ld{#1}\expandafter\def\csname
+@list\romannumeral\@ld \endcsname{\leftmargin\csname
+leftmargin\romannumeral\@ld \endcsname
+              \topsep    #2
+              \parsep    0\p@   \@plus\p@
+              \itemsep   #2}}
+
+% USEFUL definitions for the author onto the title page
+
+\newcommand\authorFooter[1]{\renewcommand\insertAuthorFooter{#1}}
+\newcommand\insertAuthorFooter{}
+
+\newcommand\authorURL[1]{\renewcommand\insertAuthorURL{#1}}
+\newcommand\insertAuthorURL{}
+
+\newcommand\slideNumber[1]{\renewcommand\insertSlideNumber{#1}}
+\newcommand\insertSlideNumber{\inserttotalframenumber}
+
+\newcommand\venue[1]{\renewcommand\insertVenue{#1}}
+\newcommand\insertVenue{}
+
+\newcommand\titleLogo[1]{\renewcommand\insertTitleLogo{#1}}
+\newcommand\insertTitleLogo{}
+
+\newcommand\groupLogo[1]{\renewcommand\insertgroupLogo{#1}}
+\newcommand\insertgroupLogo{}
+
+\newcommand{\tiniest}{\@setfontsize{\tiniest}{5pt}{5pt}}
+
+\makeatother
+
+\newcommand{\srcsize}{\fontsize{7pt}{7pt}}
+\newcommand{\slogan}[1]{\srcsize \textbf{#1}}
+
+\defbeamertemplate*{title page}{customized}[1][]
+{
+  \hspace*{-2cm}
+  \begin{tikzpicture}
+  \fill[color=readingGray] (0,0) rectangle (\the\paperwidth+2cm,\the\paperheight);
+  \node[inner sep=0pt] (logo) at (\the\paperwidth-1cm,\the\paperheight-1cm) {\includegraphics[width=2cm]{reading-white-logo}};
+
+
+  \node[inner sep=0pt, anchor=west,text width=\the\paperwidth-1cm] (title) at (2cm,\the\paperheight-2.2cm) {\usebeamerfont{title}\Huge\textcolor{white}{\inserttitle}};
+
+  \node[inner sep=0pt, anchor=west,text width=\the\paperwidth-2cm] (title) at (2cm,2.5cm) {\usebeamerfont{subtitle}%
+  \textcolor{white}{\insertsubtitle}};
+
+  \node[inner sep=0pt, anchor=west,text width=\the\paperwidth-2cm] (title) at (2cm,1.6cm)   {
+  \URLColor{white}{\insertAuthorURL}};
+
+  \node[inner sep=0pt, align=center] (author) at (\the\paperwidth/2+0.9cm,4.5cm) {\insertTitleLogo};
+
+  \fill[color=readingRed] (2cm,\the\paperheight) rectangle (7cm,\the\paperheight-1.5cm);
+  \node[inner sep=0pt, anchor=west,text width=4.5cm] (unit) at (2.3cm,\the\paperheight-0.75cm) {\scriptsize \textcolor{white}{\insertinstitute}};
+
+  \node[inner sep=0pt, anchor=west] (unit) at (1.5cm,0.25cm) {\tiniest \textcolor{white}{Copyright University of Reading}}; % the layout is copyrighted....
+  \node[inner sep=0pt, anchor=west] (unit) at (1.5cm,0.75cm) {\scriptsize \textcolor{white}{\insertdate}};
+  \node[inner sep=0pt, anchor=west] (unit) at (7.5cm,0.25cm) {\scriptsize \textcolor{white}{LIMITLESS \slogan{POTENTIAL} \textbar \enskip LIMITLESS \slogan{OPPORTUNITIES} \textbar \enskip LIMITLESS \slogan{IMPACT}}};
+  \node[inner sep=0pt, anchor=west] (author) at (7.5cm,2.5cm) {\usebeamerfont{author}\setstretch{0.5}\parbox{9cm}{\textcolor{white}{\insertauthor}}};
+
+  \node[inner sep=0pt, anchor=west] (author) at (7.5cm,1.6cm) {\usebeamerfont{author}\setstretch{0.5}\parbox{9cm}{\textcolor{white}{\insertVenue}}};
+
+  \node[inner sep=0pt] (logo) at (8.5cm,\the\paperheight-1cm) {\insertgroupLogo};
+  \end{tikzpicture}
+  )
+}
+
+\newcommand{\slogant}[1]{\textbf{#1}} % \fontsize{5pt}{5pt}
+
+
+\setbeamertemplate{footline}[text line]{
+\hspace*{-1em}
+\begin{beamercolorbox}[sep=0.5em,wd=1.01\paperwidth,leftskip=0.2cm,rightskip=0.1cm,ht=2em]{white}
+\insertAuthorFooter \hfill \textcolor{readingRed}{LIMITLESS} \slogant{POTENTIAL} \textbar \enskip \textcolor{readingRed}{LIMITLESS} \slogant{OPPORTUNITIES} \textbar \enskip \textcolor{readingRed}{LIMITLESS} \slogant{IMPACT} \hspace{2em} \insertframenumber\,/\,\insertSlideNumber
+\end{beamercolorbox}
+}
+
+
+\useinnertheme{rectangles}
+
+\setbeamerfont{block title}{size={}}
+\setbeamercolor*{palette primary}{fg=white,bg=readingRed}
+\setbeamercolor*{palette secondary}{fg=white,bg=readingGray}
+\setbeamercolor*{palette tertiary}{fg=black,bg=readingRed}
+\setbeamercolor*{palette quaternary}{fg=white,bg=readingRed}
+
+\setbeamercolor*{footlinecolor}{use=structure,fg=white,bg=readingRed}
+\setbeamercolor{frametitle}{fg=readingRed}
+\setbeamercolor{enumerate item}{fg=readingRed}
+\setbeamercolor{enumerate subitem}{fg=readingRed}
+\setbeamercolor{enumerate subsubitem}{fg=readingRed}
+\setbeamercolor{enumerate subsubsubitem}{fg=readingRed}
+\setbeamercolor{item projected}{bg=readingRed, fg=white}
+\setbeamercolor{block title}{fg=readingRed}
+\setbeamertemplate{itemize item}{\color{readingRed}$\blacksquare$}
+\setbeamertemplate{itemize subitem}{\color{readingRed}$\blacktriangleright$}
+\setbeamertemplate{itemize subsubitem}{\color{readingRed}\textbullet}
+
+\setbeamercolor*{titlelike}{parent=palette primary}
+\setbeamercolor*{separation line}{}
+\setbeamercolor*{fine separation line}{}
+
+%% setup of packages
+
+\hypersetup{colorlinks,linkcolor=readingRed,urlcolor=readingRed}
+\captionsetup{textfont=footnotesize}%labelformat=empty, format=plain, labelsep=none,
+\lstset{
+	basicstyle=\ttfamily\footnotesize,
+	numberstyle=\ttfamily\tiny,
+	frame=single,
+	numbers=left,
+	numbersep=1em,
+	xleftmargin=2em,
+	language=C,
+	breaklines=true,
+	breakatwhitespace=true,
+	postbreak=\hbox{$\hookrightarrow$ },
+	showstringspaces=false,
+	tabsize=2
+}
+
+% useful commands and shortcuts
+
+\newenvironment{changemargin}[2]{%
+\begin{list}{}{%
+\setlength{\topsep}{0pt}%
+\setlength{\leftmargin}{#1}%
+\setlength{\rightmargin}{#2}%
+\setlength{\listparindent}{\parindent}%
+\setlength{\itemindent}{\parindent}%
+\setlength{\parsep}{\parskip}%
+}%
+\item[]}{\end{list}}
+
+
+% Macros to jump around:
+\newcommand{\returnSlide}[1]{
+\setbeamertemplate{footline}[text line]{
+\myfootline{\hyperlink{#1<1>}{\beamerreturnbutton{}}}
+}
+}
+
+\newcommand{\gotoSlide}[2]{
+\hfill \hyperlink{#1<1>}{\beamergotobutton{#2}}
+}
+
+\newcommand{\backupSlide}[2]{
+\setbeamertemplate{footline}[text line]{
+\myfootline{#1\,/\,#2}}
+}
+
+% FULL PAGE IMAGE
+
+\newcommand{\fullPageImage}[2]{
+\begin{frame}
+\frametitle{#1}
+\newgeometry{textwidth=12.65cm}
+\vspace*{-0.4cm}
+\hspace*{-1.05cm}
+\begin{minipage}{\textwidth}
+
+\begin{figure}
+  #2
+\end{figure}
+\end{minipage}
+\restoregeometry
+\end{frame}
+}
+
+\newcommand{\backupbegin}{
+  \appendix
+  \newcounter{framenumberappendix}
+  \setcounter{framenumberappendix}{\value{framenumber}}
+
+  \setbeamertemplate{button}{$\Leftarrow$}
+
+  \begin{frame}
+    \Huge {Appendix}
+  \end{frame}
+}
+\newcommand{\backupend}{
+   \addtocounter{framenumberappendix}{-\value{framenumber}}
+   \addtocounter{framenumber}{\value{framenumberappendix}}
+}
+
+
+\newcommand{\arrow}{\item[$\Rightarrow$]}
+
+\renewcommand{\emph}[1]{\textit{#1}}
+
+\newcommand{\sectionIntro}{
+\begin{frame}{Outline}
+  \tableofcontents[currentsection,hideothersubsections]%,subsectionstyle=hide/hide/hide
+\end{frame}
+}
+
+\newcommand{\sectionIntroHidden}{
+\begin{frame}{Outline}
+  \tableofcontents[currentsection,subsectionstyle=hide/hide/hide]
+\end{frame}
+}
+
+\newcommand{\HREFColor}[3]{\href{#2}{\color{#1}{#3}}}%
+\newcommand{\URLColor}[2]{\HREFColor{#1}{#2}{#2}}%
+\newcommand{\grayHREF}[3]{\href{#2}{\color{#1}{#3}}}%
+
+%% Make the slide very compact, typically use with [t] slides
+\newcommand{\compact}[0]{
+	\setlength{\medskipamount}{0.0pt}
+	\setlistspacing{1}{0.1ex}
+	\setlistspacing{2}{0.1ex}
+	\setlistspacing{3}{0.1ex}
+}
+
+\mode<all>

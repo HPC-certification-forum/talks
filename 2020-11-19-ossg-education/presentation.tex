@@ -12,12 +12,12 @@
 \newcommand{\hrefb}[2]{\href{#1}{\textcolor{blue}{#2}}}
 
 \subtitle{}
-\title{\Large Toward a Globally Acknowledged and Free HPC Certification}
+\title{\Large Open HPC Certification and Relationship to OSS}
 \author{Julian Kunkel (+ HPC Certification Forum)}
-\date{2020-05-20}
+\date{2020-11-19}
 \authorURL{https://hpc-certification.org}
 \authorFooter{Julian M. Kunkel et al.}
-\venue{HPCCF Virtual Workshop}
+\venue{Open Source in Training and Education\\BCS Open Source Specialist Group}
 \institute{Department of Computer Science}
 \groupLogo{\includegraphics[width=2.5cm]{hpccf-small}}
 \titleLogo{ \includegraphics[height=2.5cm]{blur-book-stack-books-590493}\includegraphics[height=2.5cm]{ground-group-growth-461049}\includegraphics[height=2.5cm]{accomplishment-ceremony-college-267885}\includegraphics[height=2.5cm]{ground-group-growth-461049}\includegraphics[height=2.5cm]{blur-book-stack-books-2}}
@@ -38,50 +38,13 @@
 %       lessons learned
 %       reproducibility of the processes and resources
 
-\section{The Workshop}
-
-\begin{frame}{Workshop}
-  \begin{block}{Goals}
-    \begin{itemize}
-      \item Establish globally acknowledged HPC certification
-        \begin{itemize}
-          \item Discuss opportunities and roadmap, foster collaboration
-        \end{itemize}
-    \end{itemize}
-  \end{block}
-
-  \vspace*{-0.7em}
-
-
-  \begin{block}{Agenda}
-    \begin{itemize}
-      \item Introduction to the HPC Certification Forum (20 min)
-      \item Invited speakers (10 min each)
-      \item Examination and certification (20 min)
-      \item Discussion
-    \end{itemize}
-  \end{block}
-
-  \vspace*{-0.3em}
-
-  \begin{block}{Interactivity}
-    \begin{itemize}
-      \item Q\&A time slot after each talk
-      \item Please feel free to ask questions ASAP in the chat
-      \item Critical discussions are welcome!
-    \end{itemize}
-  \end{block}
-
-\end{frame}
-
-
 \section{The Forum}
 \sectionIntroHidden
 
 \subsection{}
 
 
-\begin{frame}{Challenges for HPC Training}
+\begin{frame}{Challenges for HPC (and Open Source) Training}
 		\begin{itemize}
 			\item Not all users possess the right level of training
 				\begin{itemize}
@@ -152,28 +115,10 @@
 
 	\begin{block}{Responsibilities}
 		\begin{itemize}
-			\item Curating and maintaining the skill tree and certificates
+			\item Curating and maintaining the \textbf{Competence Standard}
 			\item Providing tools and ecosystem around the competences
 		\end{itemize}
 	\end{block}
-\end{frame}
-
-\begin{frame}{Membership}
-
-  \begin{block}{Mandate and Election}
-  \begin{itemize}
-  \item Steering board is elected for one year (period of activity)
-  \item Period June -- June
-  \item Take over of new steering board during general assembly at ISC HPC
-  \end{itemize}
-  \end{block}
-
-  \begin{block}{Current election}
-  \begin{itemize}
-  \item We will soon start with the voting for next year's period
-  \item Join our Slack channel and election channel if you are interested
-  \end{itemize}
-  \end{block}
 \end{frame}
 
 
@@ -192,11 +137,10 @@
     \begin{itemize}
       \item HPC Knowledge: Lev Lafayette (University of Melbourne)
       \item Performance Engineering: Anja Gerbes (University of Frankfurt)
-      \item Use of the HPC Environment: (Jean-Thomas Acquaviva) (DDN)
-      \item Software Development: Waseem Kamleh (University of Adelaide)
-			\item Administration: Sharan Kalwani (DataSwing)
-			\item Big Data Analytics: Cristiana Dinea (NVIDIA)
+      \item Sofware Development: Roberto Villegas-Diaz (South Dakota State University)
+      \item Administration: Sudeep Banerjee (Indian Institute of Technology Gandhinagar)
     \end{itemize}
+    \item Other topics are jointly managed by the board
     \item Examination curator: Christian Meesters (University of Mainz)
     \item Publicity chair: Weronika Filinger
   \end{itemize}
@@ -219,7 +163,7 @@
     \begin{itemize}
       \item Everything* is developed/available in the open \\
         GitHub (\url{https://github.com/HPC-certification-forum})
-      \item Exception are examination questions (later talk)
+      \item Exception are examination questions
     \end{itemize}
   \end{block}
 \end{frame}
@@ -242,32 +186,32 @@
 	\end{figure}
 \end{frame}
 
-
 \begin{frame}{Example High-Level Skill (Excerpt)}
 \begin{itemize}
-\item Name: SLURM Workload manager
-\item Id: USE4.2.2-B
-\item Background: {\small SLURM is a widely used open-source workload
-manager providing various advanced features.}
+\item Name: Command Line Interface
+\item Id: USE1.1-B
+\item Background: {\small HPC systems are usually accessed via a Linux-based Command Line Interface (CLI) that is provided by a shell.
+At its core, a shell is ...}
 \item Aim:
 \begin{itemize}
-\item comprehend and describe the basic architecture of SLURM and its tools
-\item use relevant tools to run and monitor (parallel) applications
+\item describe the key principles of a shell
+\item execute basic programs to query system information and manipulate...
 \end{itemize}
 \end{itemize}
 
 \begin{block}{Learning outcomes (these must be examinable)}
 \begin{itemize}
-\item run interactive jobs with salloc, a batch job with sbatch
-\item explain the architecture of SLURM, i.e., the role of slurmd, srun
-\item explain the function of the tools: sacct, sbatch, salloc, ...
-\item explain time limits and the benefit of a backfill scheduler
-\item \textit{see \url{https://www.hpc-certification.org/wiki/}}
+\item Utilize the bash shell to execute individual programs with arguments
+\item Describe the meaning of the exit code of a program
+\item Run multiple programs after another depending on the exit code ;, \&\&, ||
+\item List the set of basic programs and their tasks:
+\begin{itemize}
+  \item pwd
+  \item ... See \url{https://www.hpc-certification.org/wiki/skill-tree/use/1/1/b}
+\end{itemize}
 \end{itemize}
 \end{block}
 \end{frame}
-
-
 
 \begin{frame}{Classification of HPC Competences}
 	\begin{itemize}
@@ -329,17 +273,17 @@ manager providing various advanced features.}
 \begin{columns}
 \column{0.8\textwidth}
 	\begin{itemize}
-	\item Released a version of the skill tree (v0.5)
+	\item The development version of the Competence Standard is online
 	\item Released technical representations of the HPC skills
     \begin{itemize}
-      \item XML and Markdown versions (embedded on a Wiki)
+      \item Markdown (embedded in a Wiki)
     \end{itemize}
 	\item Released JavaScript for visualization of skill tree \hrefb{https://www.hpc-certification.org/skills/}{(demo)}
 		\begin{itemize}
 			\item Enables views: adjustable/embedable in your webpage
 		\end{itemize}
 	\item Developed prototype for exam process and framework
-  \item Developed a tree-versioning strategy
+  \item Developed various processes
 	\item Designed seal of endorsement
 	\item Engaged with various stakeholders (e.g., SIGHPC Edu)
 	\item Conducted survey to verify the skill tree (more to come!)
@@ -378,6 +322,82 @@ manager providing various advanced features.}
         \item Uses the OpenSource tool Freemind
       \end{itemize}
     \item Discussion on our \href{https://join.slack.com/t/hpc-certification/shared_invite/enQtMzUwNzU3NzM2MTkzLTAzZWM3NDg0N2I2ZmQwOWI5ZGUwNjNlNDgzM2RmOTM3ZWRjNjIxYTc5NzUxYTJhNmRlNmM5YmE1NDY3YzkzYzA}{Slack}
+    \item Details in our videos on YouTube:
+    \url{https://www.youtube.com/playlist?list=PL4b682pSp7MQbdhhvwisrPo7PjYya26_g}
+  \end{itemize}
+  \end{block}
+\end{frame}
+
+
+
+\section{Certification Process}
+\sectionIntroHidden
+
+\begin{frame}{Certification: Assessment Prototype}
+		\begin{itemize}
+			\item[\color{readingRed}{1.}] User takes multiple-choice test online (any time!)
+			\begin{itemize}
+				\item A combination of JavaScript and a web service
+				\item System selects number of questions randomly from a pool
+					\begin{itemize}
+						\item The questions are managed with rigorous license agreement
+					\end{itemize}
+				\item System draws 4-5 responses from 10 possible responses (some randomized)
+			\end{itemize}
+			\item[\color{readingRed}{2.}] Choices are submitted to the web server
+			\item[\color{readingRed}{3.}] \textit{Approval} of the result
+			\item[\color{readingRed}{4.}] Automatic creation of certificate and returned by email
+			\begin{itemize}
+							\item Permanent computer-verifiable proof that skill is created
+							\begin{itemize}
+								\item Return a text version with GPG signature
+								\item Return a link that can be verified on hpc-certification.org
+							\end{itemize}
+			\end{itemize}
+			\item Privacy: minimize information stored on servers, keep some for statistics
+			\item Includes some measure to prevent cheating and brute forcing (e.g., delay)
+		\end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]{Certification: Certificate}
+\begin{columns}
+	\column{0.6\textwidth}
+	\begin{block}{Text representation}
+
+		\scriptsize
+		\begin{verbatim}
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA512
+HPC Certification Forum Certificate
+This text confirms that "Jane Doe" has
+successfully obtained the certificate
+"HPC driving license" (id: 1) at 02/2019.
+Verification URL: https://hpc-certification.org/[...]
+-----BEGIN PGP SIGNATURE-----
+[...]
+-----END PGP SIGNATURE-----
+		\end{verbatim}
+	\end{block}
+
+\column{0.4\textwidth}
+	\begin{block}{Certificate}
+		\medskip
+		\includegraphics[width=\textwidth]{jane-doe}
+	\end{block}
+\end{columns}
+\end{frame}
+
+\begin{frame}{Relevance for OSS}
+  \begin{itemize}
+    \item HPC skills require Linux knowledge
+    \item Maybe the concepts for HPC-CF is relevant generally to practitioners?
+    \item Open, free, and fine-grained certification would be great to have for Linux!
+  \end{itemize}
+
+  \begin{block}{New: Experts Adopting Skills}
+  \begin{itemize}
+  \item Enable experts to curate skills that are in their field of expertise
+  \item Similar to code maintainer
   \end{itemize}
   \end{block}
 \end{frame}
