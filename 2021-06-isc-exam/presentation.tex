@@ -1,0 +1,311 @@
+%-------------------------------------------------------%
+%      HPCCF Virt. Workshop Presentation CM             %
+%-------------------------------------------------------%
+\documentclass[english,xcolor=pdftex,dvipsnames,compress,aspectratio=169]{beamer}
+
+
+%\setbeamertemplate{mini frames}[box]
+\usepackage{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsfonts,amsmath,amssymb}
+\usepackage{wrapfig}
+\usepackage{pifont}
+
+\usepackage{color,colortbl}
+\usepackage{upquote}
+% \usepackage{showexpl}
+% \lstset{
+%     basicstyle=\ttfamily\small,
+%     commentstyle=\itshape\ttfamily\small,
+%     showspaces=false,
+%     showstringspaces=false,
+%     breaklines=true,
+%     breakautoindent=false,
+%     captionpos=t
+% }
+
+\definecolor{pblue}{RGB}{45,106,148}
+\definecolor{pdarkblue}{RGB}{35,71,100}
+\definecolor{plightblue}{RGB}{90,159,212}
+\definecolor{pyellow}{RGB}{255,212,59}
+\definecolor{pdarkyellow}{RGB}{255,188,41}
+\definecolor{orange}{RGB}{255,165,0}
+\definecolor{plightyellow}{RGB}{255,232,115}
+\definecolor{pdarkgrey}{RGB}{100,100,100}
+\definecolor{pgrey}{RGB}{153,153,153}
+\definecolor{plightgrey}{RGB}{233,233,233}
+\definecolor{plightgrey2}{RGB}{247,247,247}
+\definecolor{pnavy}{RGB}{0,0,170}
+\definecolor{BrickRed}{RGB}{150,22,11}
+\definecolor{BlueViolet}{RGB}{138, 43, 226}
+\definecolor{PineGreen}{RGB}{0, 51, 0}
+\definecolor{light-gray}{gray}{0.95}
+
+\definecolor{UniRot}{RGB}{193,0,42}
+\definecolor{UniDunkelGrau}{RGB}{99,99,99}
+\definecolor{UniHellGrau}{RGB}{172,172,172}
+
+\definecolor{UrlColor}{rgb}{0,0.08,0.45}
+\definecolor{links}{rgb}{0,0,0}
+
+\usetheme{Goettingen_MZ_twist} % Pittsburgh, CambridgeUS
+%\usecolortheme{beaver} %wolverine | crane | beaver | seahorse
+%\useinnertheme{rounded} 
+%\useoutertheme{default}
+\usefonttheme{default}
+%\setbeamercovered{transparent}
+\setbeamertemplate{footline}[frame number]
+\setbeamersize{text margin left=0.5cm, text margin right=0.5cm}
+
+\setbeamercolor{structure}{fg=UniRot}% to modify  immediately all palettes
+\setbeamercolor{title}{fg=UniRot}
+\setbeamercolor{title in head/foot}{fg=UniRot}
+
+\setbeamercolor{block title}{bg=UniRot!20,fg=darkred}
+\setbeamercolor{block body}{fg=black, bg=plightgrey2}
+
+% \setbeamercolor{block title}{fg=white,bg=orange}
+\setbeamercolor{block title alerted}{fg=white,bg=UniRot}
+\setbeamercolor{block title example}{fg=white,bg=PineGreen!80}
+
+\graphicspath{{../2019-06-isc/}{../2019-06-isc/fig/}{img/}{../logo/}{images/}}
+
+\usepackage{tikz}
+\usetikzlibrary{arrows,shapes,backgrounds,positioning,shadows,decorations,trees,decorations.pathreplacing}
+
+
+\addtobeamertemplate{footline}{}{%
+\begin{tikzpicture}[remember picture,overlay]
+\node[anchor=south west,yshift=2pt] at (current page.south west) {\includegraphics[height=0.8cm]{./images/logo_schriftzug.jpg}};
+\end{tikzpicture}}
+
+
+
+\title{\Large HPCCF Taking the Exam}
+\author{Christian Meesters (+ HPC Certification Forum)}
+\date{2021-06-29}
+%\authorURL{https://hpc-certification.org}
+%\authorFooter{Christian Meesters \& Julian Kunkel}
+%\venue{HPCCF Virtual Workshop}
+\institute{HPC Group -- Johannes Gutenberg-University of Mainz}
+%\groupLogo{\includegraphics[width=2.5cm]{hpccf-small}}
+
+\usepackage{multicol}
+
+\usepackage{hhline}
+
+\usepackage{times}
+
+% will decrease the font size for one frame
+\newcommand\Fontvi{\fontsize{6}{7.2}\selectfont}
+
+\usepackage{verbatim}
+\usepackage{listings}
+
+\lstloadlanguages{Python,bash,C++}
+\lstset{showspaces=false,
+basicstyle=\small,
+showstringspaces=false}
+
+
+%default python listings:
+\lstdefinestyle{Python}
+{
+  language=Python,
+  basicstyle=\small,
+  showstringspaces=false,
+  stepnumber=5,
+  numberstyle=\tiny,
+  numbersep=5pt,
+  showspaces=false,
+  frame=single,
+  framerule=0.4pt,
+  rulecolor=\color{pgrey},
+  backgroundcolor=\color{white},
+  stringstyle=\color{BrickRed},
+  keywordstyle=\color{BlueViolet}\bfseries,
+  commentstyle=\color{PineGreen}\bfseries,
+  identifierstyle={},
+  emph={[10]self}, emphstyle={[10]\color{pblue}},
+  emph={[11]yield}, emphstyle={[11]\color{pblue}},
+}
+
+%default python listings:
+\lstdefinestyle{C++}
+{
+  language=C++,
+  basicstyle=\small,
+  showstringspaces=false,
+  stepnumber=5,
+  numberstyle=\tiny,
+  numbersep=5pt,
+  showspaces=false,
+  frame=single,
+  framerule=0.4pt,
+  rulecolor=\color{pgrey},
+  backgroundcolor=\color{white},
+  stringstyle=\color{BrickRed},
+  keywordstyle=\color{BlueViolet}\bfseries,
+  commentstyle=\color{PineGreen}\bfseries,
+  identifierstyle={},
+  emph={[10]self}, emphstyle={[10]\color{pblue}},
+  emph={[11]yield}, emphstyle={[11]\color{pblue}},
+}
+
+\newcommand{\CC}{C\nolinebreak\hspace{-.05em}\raisebox{1ex}{\tiny\bf +}\nolinebreak\hspace{-.10em}\raisebox{1ex}{\tiny\bf +}}
+
+%default shell listings:
+\lstdefinestyle{Shell}
+{
+  language=Bash,
+  basicstyle=\ttfamily\small,
+  showstringspaces=false,
+  frame=single,
+  framerule=0.4pt,
+  rulecolor=\color{pgrey},
+  backgroundcolor=\color{plightgrey2},
+  stringstyle=\color{BrickRed},
+  keywordstyle=\color{BlueViolet},
+  commentstyle=\color{PineGreen}\bfseries,
+  identifierstyle=\color{black},
+  emph={[10]\$,>>>}, emphstyle={[10]\color{pblue}},
+  moredelim=**[is][\bfseries\color{red}]{@}{@}
+}
+
+%default plain listings (e.g. for config files):
+\lstdefinestyle{Plain}
+{ 
+  stepnumber=5,
+  numberstyle=\tiny,
+  numbersep=5pt,
+  language=Bash,
+  basicstyle=\ttfamily\small,
+  showstringspaces=false,
+  frame=single,
+  framerule=0.4pt,
+  rulecolor=\color{pgrey},
+  backgroundcolor=\color{plightgrey2},
+  stringstyle=\color{black},
+  keywordstyle=\color{black},
+  commentstyle=\color{blue}\bfseries,
+  identifierstyle=\color{black},
+  emph={[10]\$,>>>}, emphstyle={[10]\color{pblue}}
+}
+\lstdefinelanguage{XML}
+{
+  frame=single,
+  framerule=0.4pt,
+  rulecolor=\color{pgrey},
+  backgroundcolor=\color{plightgrey2},
+  stringstyle=\color{black},
+  keywordstyle=\color{black},
+  commentstyle=\color{blue}\bfseries,
+  identifierstyle=\color{black},
+  emph={[10]\$,>>>}, emphstyle={[10]\color{pblue}}
+  morestring=[b]",
+  morestring=[s]{>}{<},
+  morecomment=[s]{<?}{?>},
+  morekeywords={xmlns,version,type}% list your attributes here
+}
+
+\newcommand{\bibtex}{\textsc{Bib}\TeX}
+
+%%% https://tex.stackexchange.com/questions/99316/symbol-for-external-links
+\newcommand{\LinkSymbol}{%
+  \tikz[x=1.2ex, y=1.2ex, baseline=-0.05ex]{% 
+    \begin{scope}[x=1ex, y=1ex]
+      \clip (-0.1,-0.1) 
+      --++ (-0, 1.2) 
+      --++ (0.6, 0) 
+      --++ (0, -0.6) 
+      --++ (0.6, 0) 
+      --++ (0, -1);
+      \path[draw, 
+      line width = 0.5, 
+      rounded corners=0.5] 
+      (0,0) rectangle (1,1);
+    \end{scope}
+    \path[draw, line width = 0.5] (0.5, 0.5) 
+    -- (1, 1);
+    \path[draw, line width = 0.5] (0.6, 1) 
+    -- (1, 1) -- (1, 0.6);
+  }
+}
+\newcommand{\lhref}[2]{\href{#1}{#2\,\LinkSymbol}}
+
+%%%% shortcuts for uniform appearance of common strings %%%%
+\newcommand{\slurm}{\textsc{slurm}~}
+\makeatletter
+\newcommand{\rmnum}[1]{\romannumeral #1}
+\newcommand{\Rmnum}[1]{\expandafter\@slowromancap\romannumeral #1@}
+\makeatother
+\usepackage{xspace}
+\newcommand{\mogon}{\textsc{mogon}\xspace}
+\newcommand{\mogonI}{\textsc{mogon}\,\Rmnum{1}\xspace}
+\newcommand{\mogonII}{\textsc{mogon}\,\Rmnum{2}\xspace}
+
+\setcounter{tocdepth}{1}
+
+
+\venue{Parallel event to ISC HPC}
+\institute{HPC Group Mainz, Germany}
+\groupLogo{\includegraphics[width=2.5cm]{hpccf-small}}
+\titleLogo{ \includegraphics[height=2.8cm]{blur-book-stack-books-590493}\includegraphics[height=2.8cm]{ground-group-growth-461049}\includegraphics[height=2.8cm]{accomplishment-ceremony-college-267885}\includegraphics[height=2.8cm]{ground-group-growth-461049}\includegraphics[height=2.8cm]{blur-book-stack-books-2}}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Passe captions an
+\setbeamertemplate{caption}{\insertcaption}
+% \setbeamerfont{caption}{size=\scriptsize}
+\setlength\abovecaptionskip{-2.5pt}
+\setlength\belowcaptionskip{0pt}
+
+
+
+% For every picture that defines or uses external nodes, you'll have to
+% apply the 'remember picture' style. To avoid some typing, we'll apply
+% the style to all pictures.
+\tikzstyle{every picture}+=[remember picture]
+\tikzstyle{na} = [baseline=-.5ex]
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+\begin{frame}[plain]{}
+  \maketitle
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+% \begin{frame}
+%     \frametitle{Outline}
+%     \tableofcontents
+% \end{frame}
+
+\include{taking_exam}
+
+%\include{design}
+
+%\include{contributions}
+
+\begin{frame}
+ \centering
+ \begin{columns}
+   \begin{column}{0.8\textwidth}
+     \centering
+     \Large
+     Thank You for Your Attention!
+   \end{column}
+   \begin{column}{0.2\textwidth}
+     
+      \includegraphics[width=.6\textwidth]{images/end}
+   \end{column}
+ \end{columns}
+\end{frame}
+
+
+\end{document}
+
