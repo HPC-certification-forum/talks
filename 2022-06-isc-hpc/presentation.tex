@@ -38,35 +38,22 @@
 %       lessons learned
 %       reproducibility of the processes and resources
 
+\section{BoF Agenda}
+
+\begin{frame}{BoF Agenda}
+  \begin{itemize}
+    \item Introduction of the HPC Certification Program \\ \textit{Julian Kunkel}
+    \item Station organization based on the Example: Software Development Subtree \\ \textit{Marc-Andre Hermanns}
+    \item \textbf{All participants}: Independent work across stations
+    \item Wrap up - General (+ Panel) discussion
+  \end{itemize}
+\end{frame}
+
+
 \section{The Forum}
 \sectionIntroHidden
 
 \subsection{}
-
-
-\begin{frame}{Challenges for HPC (and Open Source) Training}
-		\begin{itemize}
-			\item Not all users possess the right level of training
-				\begin{itemize}
-				\item Inefficient usage of systems, frustration, lost potential
-				\item Good training saves compute time and costs!
-				\end{itemize}
-      \item Diverse user background and goals
-        \begin{itemize}
-          \item Science is the goal, HPC is the vehicle
-          \item Need to run an application to complete the PhD
-        \end{itemize}
-      \item Learning is not easy
-			\begin{itemize}
-				\item Users need to understand beneficial knowledge for tasks
-				\item There exist various different training material
-				\item Teaching of different data centers is hard to compare
-			\end{itemize}
-			\item Data center have difficulties to verify the skills of users
-		\end{itemize}
-
-\end{frame}
-
 
 \begin{frame}{The \includegraphics[width=0.45\textwidth]{hpccf-full}}
 		\begin{block}{Goals}
@@ -217,7 +204,7 @@ At its core, a shell is ...}
 		\begin{itemize}
 			\item Too fine $\Rightarrow$ content of a skill is predefined at leaf level
 			\item Too coarse $\Rightarrow$ no help for structuring the material
-			\item Guiding principle: leaf node should be coverable in 1-4 hour lecture/workshop
+			\item Guiding principle: leaf node should be covered in 1-4 hour lecture/workshop
 		\end{itemize}
 
 
@@ -237,33 +224,6 @@ At its core, a shell is ...}
 \end{frame}
 
 
-
-\begin{frame}{Further Considerations}
-	\begin{itemize}
-		\item Certificate definition
-		\begin{itemize}
-			\item Bundles a set of useful skills together %(e.g. "Getting startet with HPC Clusters")
-			\item A users' HPC qualification is certified by successful exams
-      \item Testing a single (fine-grained) skill may be too easy with a cheat sheet
-		\end{itemize}
-		\item Separation of \textbf{skill}, \textbf{certificates} and \textbf{content provider}
-		\begin{itemize}
-			\item Similar to the concept of a high school graduation exam %("Zentralabitur")
-			\item Learning material can be provided by different institutions
-			\item Teachers can put badges on material: this "trains skills X, Y, Z"
-		\end{itemize}
-  	\item External information can be linked to the skills providing different \textbf{views}
-		\begin{itemize}
-			\item Suitability for a user role (Tester, Builder, Developer)
-			\item Suitability for a scientific domain (Chemistry, Physics, ...)
-			\item View: purpose-specific representation / coloring / content
-				\begin{itemize}
-				\item Groups/institutions can derive a new skill tree with their own emphasis
-				\item  What should people know to effectively work in your environment?
-				\end{itemize}
-		\end{itemize}
-	\end{itemize}
-\end{frame}
 
 
 \begin{frame}{Status / Previous Activities}
@@ -287,10 +247,10 @@ At its core, a shell is ...}
 
 \begin{block}{}
 \begin{itemize}
-\item Experts Adopting Skills
+\item Supporting experts to adopt skills
 \begin{itemize}
   \item Enable experts to curate skills that are in their field of expertise
-  \item Similar to code maintainer
+  \item Similar to code maintainer - various contributions this year
 \end{itemize}
 \item Working on sponsoring 
 \item Developed first (but limited exam!)
@@ -342,7 +302,7 @@ At its core, a shell is ...}
       \item[\color{goettingenBlue}{1.}] User registers to test, receives email
 			\item[\color{goettingenBlue}{2.}] User takes test online (any time!), consists of
 			\begin{itemize}
-        \item Scenario
+        \item Scenario -- SSH login in a browser to a Docker environment
         \item Multiple choice exam
         \begin{itemize}
           \item System selects number of questions (and responses) randomly from a pool
@@ -395,32 +355,6 @@ Verification URL: https://hpc-certification.org/[...]
 \section{Conclusions}
 \sectionIntroHidden
 
-\begin{frame}{Outlook and Expected Benefits}
-	\begin{block}{HPC practitioners}
-		\vspace*{-0.2cm}
-	\begin{itemize}
-	\item Increase motivation to participate as the certificates are recognized in a CV
-	\item Validate knowledge via tests
-	\item Browse relevant competences
-	\item Identify recommended and required skills related to certain tasks
-	\item Understand and compare teaching offers across sites
-	\end{itemize}
-	\end{block}
-	\vspace*{-0.3cm}
-	\begin{block}{Data centers}
-		\vspace*{-0.2cm}
-	\begin{itemize}
-	\item Increase sharing of teaching materials
-	\item Simplifies documentation of taught skills
-	\item Identify missing teaching activities
-	\item Tailor skill-representation specifically to users
-	\item Correlate lack of skills with efficient use
-	\end{itemize}
-	\end{block}
-\end{frame}
-
-
-
 \begin{frame}{Summary}
 
 	\begin{block}{HPC Certification Program}
@@ -446,6 +380,91 @@ Verification URL: https://hpc-certification.org/[...]
 	\end{block}
   \label{pg:lastpage}
 \end{frame}
+
+\appendix 
+
+\begin{frame}{Appendix}
+\end{frame}
+
+
+\begin{frame}{Challenges for HPC (and Open Source) Training}
+		\begin{itemize}
+			\item Not all users possess the right level of training
+				\begin{itemize}
+				\item Inefficient usage of systems, frustration, lost potential
+				\item Good training saves compute time and costs!
+				\end{itemize}
+      \item Diverse user background and goals
+        \begin{itemize}
+          \item Science is the goal, HPC is the vehicle
+          \item Need to run an application to complete the PhD
+        \end{itemize}
+      \item Learning is not easy
+			\begin{itemize}
+				\item Users need to understand beneficial knowledge for tasks
+				\item There exist various different training material
+				\item Teaching of different data centers is hard to compare
+			\end{itemize}
+			\item Data center have difficulties to verify the skills of users
+		\end{itemize}
+
+\end{frame}
+
+
+\begin{frame}{Further Considerations}
+	\begin{itemize}
+		\item Certificate definition
+		\begin{itemize}
+			\item Bundles a set of useful skills together %(e.g. "Getting startet with HPC Clusters")
+			\item A users' HPC qualification is certified by successful exams
+      \item Testing a single (fine-grained) skill may be too easy with a cheat sheet
+		\end{itemize}
+		\item Separation of \textbf{skill}, \textbf{certificates} and \textbf{content provider}
+		\begin{itemize}
+			\item Similar to the concept of a high school graduation exam %("Zentralabitur")
+			\item Learning material can be provided by different institutions
+			\item Teachers can put badges on material: this "trains skills X, Y, Z"
+		\end{itemize}
+  	\item External information can be linked to the skills providing different \textbf{views}
+		\begin{itemize}
+			\item Suitability for a user role (Tester, Builder, Developer)
+			\item Suitability for a scientific domain (Chemistry, Physics, ...)
+			\item View: purpose-specific representation / coloring / content
+				\begin{itemize}
+				\item Groups/institutions can derive a new skill tree with their own emphasis
+				\item  What should people know to effectively work in your environment?
+				\end{itemize}
+		\end{itemize}
+	\end{itemize}
+\end{frame}
+
+
+
+\begin{frame}{Outlook and Expected Benefits}
+	\begin{block}{HPC practitioners}
+		\vspace*{-0.2cm}
+	\begin{itemize}
+	\item Increase motivation to participate as the certificates are recognized in a CV
+	\item Validate knowledge via tests
+	\item Browse relevant competences
+	\item Identify recommended and required skills related to certain tasks
+	\item Understand and compare teaching offers across sites
+	\end{itemize}
+	\end{block}
+	\vspace*{-0.3cm}
+	\begin{block}{Data centers}
+		\vspace*{-0.2cm}
+	\begin{itemize}
+	\item Increase sharing of teaching materials
+	\item Simplifies documentation of taught skills
+	\item Identify missing teaching activities
+	\item Tailor skill-representation specifically to users
+	\item Correlate lack of skills with efficient use
+	\end{itemize}
+	\end{block}
+\end{frame}
+
+
 
 
 
